@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/AuthProvider'
 import AuthModal from '@/components/AuthModal'
-import { Shield, BookmarkCheck, Calendar, ExternalLink, Trash2 } from 'lucide-react'
+import { Shield, Bookmark, Calendar, ExternalLink, Trash2 } from 'lucide-react'
 
 export default function MinhasCotacoesPage() {
   const router = useRouter()
@@ -92,7 +92,7 @@ export default function MinhasCotacoesPage() {
             </div>
             {user && (
               <div className="flex items-center space-x-4">
-                <span className="text-gray-600">Olá, {user.user_metadata?.name || user.email}</span>
+                <span className="text-gray-600">Olá, {user.name || user.email}</span>
                 <button
                   onClick={() => router.push('/')}
                   className="text-blue-600 hover:text-blue-700"
@@ -115,7 +115,7 @@ export default function MinhasCotacoesPage() {
 
         {savedQuotes.length === 0 ? (
           <div className="bg-white rounded-xl p-12 text-center">
-            <BookmarkCheck className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+            <Bookmark className="h-16 w-16 text-gray-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Nenhuma cotação salva
             </h3>

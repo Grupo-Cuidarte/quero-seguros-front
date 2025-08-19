@@ -47,6 +47,7 @@ export interface PersonalData {
   phone: string;
   cpf: string;
   birthDate: Date;
+  age?: number;
   address: Address;
 }
 

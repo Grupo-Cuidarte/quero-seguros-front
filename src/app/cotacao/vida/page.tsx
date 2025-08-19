@@ -263,7 +263,7 @@ export default function CotacaoVidaPage() {
               )}
               {currentStep?.type === 'input' && (
                 <div className="flex space-x-3">
-                  <input type={currentStep.inputType === 'email' ? 'email' : currentStep.inputType === 'age' || currentStep.inputType === 'income' ? 'number' : 'text'} value={userInput} onChange={(e) => setUserInput(e.target.value)} placeholder={currentStep.inputPlaceholder} className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" onKeyPress={(e) => e.key === 'Enter' && handleInputSubmit()} />
+                  <input type={currentStep.inputType === 'email' ? 'email' : currentStep.inputType === 'age' || currentStep.inputType === 'year' ? 'number' : 'text'} value={userInput} onChange={(e) => setUserInput(e.target.value)} placeholder={currentStep.inputPlaceholder} className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" onKeyPress={(e) => e.key === 'Enter' && handleInputSubmit()} />
                   <button onClick={handleInputSubmit} disabled={!userInput.trim()} className="px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed">Enviar</button>
                 </div>
               )}
